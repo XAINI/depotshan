@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    
   end
 
   # GET /products/new
@@ -61,6 +62,14 @@ class ProductsController < ApplicationController
     end
   end
 
+# Atom
+  def who_bought
+      @product = Product.find(params[:id])
+      respond_to do |format|
+        format.atom
+        format.xml { render :xml => @product}
+    end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
@@ -71,4 +80,5 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:title, :description, :image_url, :price)
     end
+  end
 end
