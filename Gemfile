@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails',                '4.2.0'
 # Use sqlite3 as the database for Active Record
@@ -12,6 +10,8 @@ gem 'sass-rails',           '5.0.0.beta1'
 gem 'uglifier',             '2.5.3'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails',         '4.1.0'
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -34,7 +34,6 @@ gem 'sdoc',                 '0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

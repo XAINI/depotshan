@@ -76,7 +76,6 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
   # logger rollback
   config.logger = Logger.new(config.paths.log.first, 'daily')
 end
